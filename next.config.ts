@@ -25,7 +25,7 @@ const nextConfig = {
     https://firebase.googleapis.com
     https://cdn.cortlet.com;
   font-src 'self' https://cdn.cortlet.com data:;
-  frame-src 'self';
+  frame-src 'self' https://*.firebaseapp.com https://*.google.com;
   frame-ancestors 'self';
 `.replace(/\s+/g, " "),
                     }

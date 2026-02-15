@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Navbar from "@/app/components/Navbar";
 
 export default function ContactPage() {
     const [status, setStatus] = useState<string | null>(null);
@@ -40,6 +41,7 @@ export default function ContactPage() {
 
     return (
         <main className="w-full min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-24 transition">
+            <Navbar/>
             <h1 className="text-5xl font-bold text-center mb-10">Contact Us</h1>
 
             <form
