@@ -1,0 +1,66 @@
+{
+  "name": "Cortlet",
+  "short_name": "Cortlet",
+  "description": "A platform of development tools engineered for precision, performance, and long-term reliability.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_light_128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_light_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "httpsensions/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_light_384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_light_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_dark_128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_dark_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_dark_256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_dark_384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.cortlet.com/images/sized-images/icon_dark_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
