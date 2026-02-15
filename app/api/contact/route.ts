@@ -1,33 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { validateCortletCaptcha } from "@/lib/validateCaptcha";
 
 export async function POST(req: Request) {
     try {
-        const { name, email, message, token } = await req.json();
+        const { name, email, message } = await req.json();
 
-        if (!token) {
+        // Basic validation
+        if (!name || !email || !message) {
             return NextResponse.json({
                 success: false,
-                error: "Missing captcha token",
+                error: "Missing required fields",
             });
         }
 
-        // 1️⃣ Validate CortletCaptcha
-        const isValid = await validateCortletCaptcha(token);
-
-        if (!isValid) {
-            return NextResponse.json({
-                success: false,
-                error: "Invalid captcha token",
-            });
-        }
-
-        // 2️⃣ Send email using Resend
         const resend = new Resend(process.env.RESEND_API_KEY);
 
         const result = await resend.emails.send({
-            from: "Cortlet Contact Form <support@cortlet.com>",
+            from: "Cortlet Contact <support@cortlet.com>",
             to: "support@cortlet.com",
             subject: `New message from ${name}`,
             html: `
@@ -39,7 +28,17 @@ export async function POST(req: Request) {
             `,
         });
 
-        console.log("(GEmail720): Email result (CESS):", result)
+        console.log("RESEND RESULT:", result);
+
+        // Check for resend error
+        if (result.error) {
+            console.error("RESEND ERROR:", result.error);
+            return NextResponse.json({
+                success: false,
+                error: result.error.message || "Email send failed",
+            });
+        }
+
         return NextResponse.json({ success: true });
 
     } catch (error) {
