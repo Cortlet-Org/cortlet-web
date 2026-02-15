@@ -46,10 +46,6 @@ Thumbs.db
 .vscode/
 *.code-workspace
 
-# === FIRECRAWL / VECTOR DB ===
-data/vector-db.json
-data/cortlet.md
-
 # === NEXT IMAGE CACHE ===
 public/static/
 public/_next/
