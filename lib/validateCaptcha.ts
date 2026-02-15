@@ -3,7 +3,7 @@ import fs from "fs";
 
 export async function validateCortletCaptcha(token: string): Promise<boolean> {
     try {
-        const publicKey = fs.readFileSync("cortlet_public.pem", "utf8");
+        const publicKey = process.env.CORTLET_PUBLIC_PEM!.replace(/\\n/g, "\n");
 
         // Decode base64 token → { combined, signature }
         const decoded = JSON.parse(Buffer.from(token, "base64").toString("utf8"));

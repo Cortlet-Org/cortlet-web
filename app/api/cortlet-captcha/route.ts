@@ -4,7 +4,7 @@ import fs from "fs";
 
 export async function POST() {
     try {
-        const privateKey = fs.readFileSync("cortlet_private.pem", "utf8");
+        const privateKey = process.env.CORTLET_PRIVATE_PEM!.replace(/\\n/g, "\n");
 
         // STEP 1 — Create payload
         const payload = {
