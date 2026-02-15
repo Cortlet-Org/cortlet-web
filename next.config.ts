@@ -60,9 +60,8 @@ frame-src
   https://cortlet-web.firebaseapp.com
   https://cortlet-web.web.app
   https://*.firebaseapp.com;
-
-frame-ancestors 'self';
-`.replace(/\s+/g, " "),
+`
+                            .replace(/\s+/g, " "),
                     },
                 ],
             },

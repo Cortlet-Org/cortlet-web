@@ -26,9 +26,14 @@ export default function LoginPage() {
 
     useEffect(() => {
         if (!loading && user && !doingLogin) {
-            router.replace("/dashboard");
+            // delay redirect until popup fully closes
+            const t = setTimeout(() => {
+                router.replace("/dashboard");
+            }, 500);
+
+            return () => clearTimeout(t);
         }
-    }, [user, loading]);
+    }, [user, loading, doingLogin]);
 
     async function login(provider: "google" | "github") {
         setDoingLogin(true);
