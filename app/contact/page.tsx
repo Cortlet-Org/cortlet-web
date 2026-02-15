@@ -1,22 +1,14 @@
 "use client";
 import { useState } from "react";
-import CortletCaptcha from "@/app/components/CortletCaptcha";
 
 export default function ContactPage() {
     const [status, setStatus] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
-    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
     async function handleSubmit(e: any) {
         e.preventDefault();
         setLoading(true);
         setStatus(null);
-
-        if (!captchaToken) {
-            setStatus("Please complete the human verification.");
-            setLoading(false);
-            return;
-        }
 
         try {
             const formData = new FormData(e.target);
@@ -27,23 +19,16 @@ export default function ContactPage() {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name,
-                    email,
-                    message,
-                    token: captchaToken, // ← CortletCaptcha token
-                }),
+                body: JSON.stringify({ name, email, message }),
             });
 
             const data = await res.json();
 
             if (data.success) {
                 setStatus("Message sent! Our support team will get back in around 1–2 days (worst case: 2–4 days).");
-
                 if (e.target) e.target.reset();
-                setCaptchaToken(null);
             } else {
-                setStatus("Captcha failed or email failed. Please try again.");
+                setStatus("Email failed. Please try again.");
             }
         } catch (error) {
             console.error(error);
@@ -55,7 +40,6 @@ export default function ContactPage() {
 
     return (
         <main className="w-full min-h-screen bg-white text-black dark:bg-black dark:text-white px-6 py-24 transition">
-
             <h1 className="text-5xl font-bold text-center mb-10">Contact Us</h1>
 
             <form
@@ -91,9 +75,6 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 rounded-lg bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700"
                     ></textarea>
                 </div>
-
-                {/* CortletCaptcha Widget */}
-                <CortletCaptcha onToken={(t) => setCaptchaToken(t)} />
 
                 <button
                     type="submit"
