@@ -10,28 +10,24 @@ const nextConfig = {
                     {
                         key: "Content-Security-Policy",
                         value: `
-              default-src 'self';
-              img-src 'self' https://cdn.cortlet.com https://developers.google.com https://github.githubassets.com data:;
-              script-src 'self' 'unsafe-inline' 'unsafe-eval' https:;
-              style-src 'self' 'unsafe-inline' https:;
-              connect-src
-                'self'
-                https://api.openrouter.ai
-                https://api.resend.com
-                https://identitytoolkit.googleapis.com
-                https://securetoken.googleapis.com
-                https://firebasestorage.googleapis.com
-                https://firestore.googleapis.com
-                https://www.googleapis.com
-                https://firebase.googleapis.com
-                https://cdn.cortlet.com;
-              font-src 'self' https://cdn.cortlet.com data:;
-              frame-src
-                'self'
-                https://cortlet-web.firebaseapp.com
-                https://*.firebaseapp.com
-                https://*.google.com;
-            `.replace(/\s+/g, " "),
+  default-src 'self';
+  img-src 'self' https://cdn.cortlet.com https://developers.google.com https://github.githubassets.com data:;
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https:;
+  style-src 'self' 'unsafe-inline' https:;
+  connect-src 'self' blob: data:
+    https://api.openrouter.ai
+    https://api.resend.com
+    https://identitytoolkit.googleapis.com
+    https://securetoken.googleapis.com
+    https://firebasestorage.googleapis.com
+    https://firestore.googleapis.com
+    https://www.googleapis.com
+    https://firebase.googleapis.com
+    https://cdn.cortlet.com;
+  font-src 'self' https://cdn.cortlet.com data:;
+  frame-src 'self';
+  frame-ancestors 'self';
+`.replace(/\s+/g, " "),
                     }
                 ],
             },
