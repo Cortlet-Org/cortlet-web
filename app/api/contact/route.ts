@@ -1,9 +1,17 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { logEvent } from "@/app/utils/Logging";
 
 export async function POST(req: Request) {
     try {
         const { name, email, message } = await req.json();
+
+        await logEvent("CONTACT_FORM_RECEIVED", {
+            name,
+            email,
+            messageType: typeof message,
+            preview: typeof message === "string" ? message.slice(0, 80) : ""
+        });
 
         // Basic validation
         if (!name || !email || !message) {
@@ -28,21 +36,31 @@ export async function POST(req: Request) {
             `,
         });
 
-        console.log("RESEND RESULT:", result);
-
-        // Check for resend error
         if (result.error) {
             console.error("RESEND ERROR:", result.error);
+
+            await logEvent("CONTACT_EMAIL_FAILED", {
+                email,
+                resendError: result.error.message
+            });
+
             return NextResponse.json({
                 success: false,
                 error: result.error.message || "Email send failed",
             });
         }
 
+        await logEvent("CONTACT_EMAIL_SENT", { email });
+
         return NextResponse.json({ success: true });
 
     } catch (error) {
         console.error("Contact API error:", error);
+
+        await logEvent("CONTACT_SERVER_ERROR", {
+            error: String(error)
+        });
+
         return NextResponse.json({
             success: false,
             error: "Server error",
