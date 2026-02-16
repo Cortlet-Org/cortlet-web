@@ -1,4 +1,4 @@
-// /app/legal/cookie/layout.tsx
+// /app/legal/cookie/page.tsx
 import Navbar from "@/app/components/Navbar";
 
 export const metadata = {

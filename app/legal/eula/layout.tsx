@@ -1,4 +1,4 @@
-// /app/legal/eula/layout.tsx
+// /app/legal/eula/page.tsx
 import Navbar from "@/app/components/Navbar";
 
 export const metadata = {

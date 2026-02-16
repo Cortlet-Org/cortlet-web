@@ -80,6 +80,12 @@ export default function ProductsPage() {
                             description="A powerful, lightweight C++ package manager for developers."
                             href="/products/quantpkg"
                         />
+
+                        <ProductCard
+                            title="tbs (new)"
+                            description="Dart-based compiler for writing Dart bootloaders in Dart."
+                            href="/products/tbs"
+                        />
                     </div>
                 </section>
 

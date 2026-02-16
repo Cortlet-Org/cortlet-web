@@ -1,4 +1,4 @@
-// /app/legal/mit/layout.tsx
+// /app/legal/mit/page.tsx
 import Navbar from "@/app/components/Navbar";
 
 export const metadata = {

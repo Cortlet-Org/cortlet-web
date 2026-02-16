@@ -131,6 +131,11 @@ export default function Navbar() {
                                                 <p className="font-medium">Quantpkg</p>
                                                 <p className="text-xs text-neutral-600 dark:text-neutral-400">C++ package manager.</p>
                                             </Link>
+
+                                            <Link href="/products/tbs" className="block hover:translate-x-1 transition">
+                                                <p className="font-medium">tbs</p>
+                                                <p className="text-xs text-neutral-600 dark:text-neutral-400">Dart-based bootloader generator via Dart -{">"} Assembly compilation pipeline.</p>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -209,6 +214,7 @@ export default function Navbar() {
                                 <Link href="/products/deconstruct">Deconstruct</Link>
                                 <Link href="/products/seo4spa">seo4spa</Link>
                                 <Link href="/products/quantpkg">Quantpkg</Link>
+                                <Link href="/products/tbs">tbs</Link>
                                 <Link href="/dashboard">Developer Dashboard</Link>
                             </div>
                         </div>

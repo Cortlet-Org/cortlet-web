@@ -1,4 +1,4 @@
-// /app/legal/aup/layout.tsx
+// /app/legal/aup/page.tsx
 import Navbar from "@/app/components/Navbar";
 
 export const metadata = {
