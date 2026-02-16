@@ -125,6 +125,19 @@ export default function LegalCenter() {
                     </p>
                 </Link>
 
+                <Link
+                    href="/legal/code-of-conduct"
+                    className="p-6 rounded-xl border border-neutral-300 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 hover:border-black dark:hover:border-white transition group"
+                >
+                    <h2 className="text-xl font-semibold group-hover:text-black dark:group-hover:text-white">
+                        Code of Conduct
+                    </h2>
+                    <p className="text-neutral-600 dark:text-neutral-400 mt-2 text-sm">
+                        Rules, expectations, and behavior guidelines for interacting with Cortlet services.
+                    </p>
+                </Link>
+
+
             </section>
 
             {/* FOOTER */}
