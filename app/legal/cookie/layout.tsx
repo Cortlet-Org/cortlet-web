@@ -1,24 +1,24 @@
-// /app/legal/conduct/layout.tsx
+// /app/legal/cookie/layout.tsx
 import Navbar from "@/app/components/Navbar";
 
 export const metadata = {
-    title: "Code of Conduct — Cortlet",
-    description: "Guidelines and expectations for behavior when using Cortlet tools, services, and community spaces.",
+    title: "Cookie Policy — Cortlet",
+    description: "Learn how Cortlet uses cookies, analytics identifiers, and tracking technologies.",
     openGraph: {
-        title: "Code of Conduct — Cortlet",
-        description: "Understand Cortlet’s behavioral guidelines and usage expectations.",
-        url: "https://cortlet.com/legal/conduct",
+        title: "Cookie Policy — Cortlet",
+        description: "Learn how Cortlet uses cookies and analytics identifiers.",
+        url: "https://cortlet.com/legal/cookie",
         siteName: "Cortlet",
         type: "article",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Code of Conduct — Cortlet",
-        description: "Guidelines and expectations for interacting with Cortlet services.",
+        title: "Cookie Policy — Cortlet",
+        description: "Learn how Cortlet uses cookies and analytics identifiers.",
     }
 };
 
-export default function LegalConductLayout({ children }: { children: React.ReactNode }) {
+export default function LegalCookieLayout({ children }: { children: React.ReactNode }) {
     return (
         <>
             <Navbar />
