@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { HiMenu, HiX } from "react-icons/hi";
-
-export default function Navbar() {
+interface NavbarProps {
+    locked?: boolean;
+}
+export default function Navbar({ locked = false }: NavbarProps) {
     const [openProducts, setOpenProducts] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const [themeVersion, setThemeVersion] = useState(0); // forces re-render on theme change
