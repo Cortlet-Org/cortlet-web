@@ -2,96 +2,83 @@
 
 # PAGE: https://cortlet.com
 
-# Cortlet.
+![Cortlet Logo](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fimages%2Fsized-images%2Ficon_light_512.png&w=384&q=75)
 
-Lightweight, secure-first tools crafted for developers and normal people who demand clean efficiency and modern simplicity.
+# Build Better. Build Cortlet.
 
-[Start with Cortlet](https://www.cortlet.com/products) [Learn More](https://www.cortlet.com/about)
+A platform of development tools engineered for precision, performance, and long-term reliability. Cortlet provides the foundation to build exceptional software with clarity and confidence.
+
+[Explore Products](https://cortlet.com/products) [Documentation](https://cortlet.com/docs) [Contact for queries](https://cortlet.com/contact)
 
 ## Why Cortlet?
 
-### ⚡ Ultra Efficient
+### Precision Engineered
 
-Every line of code is optimized for speed. No waste, no lag — just pure performance.
+Tools crafted with strict design principles ensuring stability, predictability, and top-tier performance.
 
-### 🔒 Secure by Default
+### Developer-First
 
-Cortlet follows zero-trust design principles to keep your work stable and protected.
+Everything is designed to reduce friction and maximize clarity and productivity.
 
-### 🚫 No Bloat
+### Modern Foundations
 
-Minimal by design. Only what you need — nothing more, nothing less.
+Built upon modern principles, ensuring long-term maintainability and clean architecture.
 
-### Ready to start building with Cortlet?
+## Product Categories
 
-Experience a new era of performance, clarity, and secure-first tools.
+### General-use applications
 
-[Start Now](https://www.cortlet.com/products) [Learn More](https://www.cortlet.com/about)
+Applications designed for general use.
+
+### Developer Libraries
+
+Libraries installable via a package manager.
+
+### Developer Software
+
+CLI/GUI Software designed for developers.
 
 
 # PAGE: https://cortlet.com/products
 
-# Explore Cortlet Products
+![Cortlet Logo](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fimages%2Fsized-images%2Ficon_light_512.png&w=384&q=75)
 
-Tools crafted to maximize efficiency, clarity, and developer experience.
+# Our Products
 
-![Cortlet Deconstruct](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fapp-icons%2Fcortlet-deconstruct.png&w=384&q=75)
+Explore tools built for clarity, performance, and modern development workflows.
 
-### Cortlet Deconstruct
+## Explore The Tools
 
-Deconstructs problems into simple steps.
-
-OSS: Not OSS
-
-[![Download on App Store](https://cdn.cortlet.com/app-icons/download-on-the-app-store-black-en-us/black.svg)](https://apps.apple.com/pk/app/cortlet-deconstruct/id6755674277)![QR Code — Install Cortlet Deconstruct](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fapp-icons%2Fqr-code.png&w=384&q=75)
-
-![seo4spa](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fapp-icons%2Fseo4spaicon.png&w=384&q=75)
-
-### seo4spa
-
-An NPM package designed to add SEO for your SPA apps.
-
-OSS: Yes
-
-[View on NPM](https://www.npmjs.com/package/seo4spa) [GitHub](https://github.com/Cortlet-Software/seo4spa)
-
-![seo4spa](https://cortlet.com/_next/image?url=https%3A%2F%2Fcdn.cortlet.com%2Fapp-icons%2Fquantpkg-icon.png&w=384&q=75)
-
-### Quantpkg
-
-A C++ package manager that is lightweight, but for developers who want simplicity without fighting complexity.
-
-OSS: Yes
-
-[Download](http://github.com/Cortlet-Software/quantpkg/releases) [GitHub](https://github.com/Cortlet-Software/quantpkg)
+[**Deconstruct** \\
+Break down stressful tasks, studying, and problems into simple steps. iOS only.](https://cortlet.com/products/deconstruct) [**seo4spa** \\
+An NPM package that dynamically updates meta tags inside SPA frameworks.](https://cortlet.com/products/seo4spa) [**Quantpkg** \\
+A powerful, lightweight C++ package manager for developers.](https://cortlet.com/products/quantpkg) [**tbs (new)** \\
+Dart-based compiler for writing Dart bootloaders in Dart.](https://cortlet.com/products/tbs)
 
 
 # PAGE: https://cortlet.com/docs
 
-# Cortlet Documentation
+# Cortlet Docs
 
-Everything you need to build, integrate, and ship with Cortlet tools. Clear guides. Fast onboarding. Developer-first design.
+Welcome to the official Cortlet documentation. Learn how to use Cortlet tools like Deconstruct, seo4spa, and Quantpkg with clear, structured, developer-friendly guides.
 
-## seo4spa Documentation
+## Quick Start
 
-Documentation for the seo4spa NPM package — install, configure and optimize SEO for Single Page Applications.
-
-[Go to Documentation](https://cortlet.com/docs/seo4spa)
-
-## quantpkg Documentation
-
-Documentation for quantpkg. Install, configure, and use.
-
-[Go to Documentation](https://cortlet.com/docs/quantpkg)
+[**seo4spa Documentation** \\
+Integrate proper SEO into SPA frameworks by updating meta tags dynamically.](https://cortlet.com/docs/seo4spa) [**Quantpkg CLI** \\
+Install packages, resolve dependencies, and manage C++ workflows.](https://cortlet.com/docs/quantpkg)
 
 
 # PAGE: https://cortlet.com/legal
 
-# Legal Center
-
-All Cortlet legal documents in one place. Transparency, clarity, and trust.
-
-[**EULA (End User License Agreement)** \\
-Software usage terms for Cortlet applications.](https://cortlet.com/legal/eula) [**MIT License** \\
-Open-source licensing terms for applicable Cortlet tools.](https://cortlet.com/legal/mit-license) [**Apache 2.0 License** \\
-Permissions, conditions, and limitations under Apache License 2.0.](https://cortlet.com/legal/apache-2)
+[**Privacy Policy** \\
+How Cortlet processes and protects your data.](https://cortlet.com/legal/privacy) [**Terms of Service** \\
+Rules and conditions for using the platform.](https://cortlet.com/legal/tos) [**Cookie Policy** \\
+Information on cookies and tracking technologies.](https://cortlet.com/legal/cookie) [**End User License Agreement** \\
+License and usage terms for Cortlet software.](https://cortlet.com/legal/eula) [**Acceptable Use Policy** \\
+Permitted usage for Cortlet products.](https://cortlet.com/legal/aup) [**Apache 2.0 License** \\
+Terms for Apache-licensed components.](https://cortlet.com/legal/apache-2) [**MIT License** \\
+Terms for MIT-licensed components.](https://cortlet.com/legal/mit) [**DMCA** \\
+Learn how to submit copyright takedown notices and report infringing content.](https://cortlet.com/legal/dmca) [**Impressum** \\
+Legal disclosure and responsible entity information for Cortlet.](https://cortlet.com/legal/impressum) [**Code of Conduct** \\
+Rules, expectations, and behavior guidelines for interacting with Cortlet services.](https://cortlet.com/legal/code-of-conduct)

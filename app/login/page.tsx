@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, getAuth } from "firebase/auth";
+import { GoogleAuthProvider, GithubAuthProvider, signInWithPopup, getAuth, linkWithCredential, fetchSignInMethodsForEmail } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { firebaseApp } from "@/app/lib/firebaseConfig";
 import { useAuth } from "@/app/hooks/useAuth";
@@ -45,11 +45,64 @@ export default function LoginPage() {
                 : new GithubAuthProvider();
 
         try {
+            // First attempt login normally
             await signInWithPopup(auth, prov);
             router.push("/dashboard");
         } catch (err: any) {
-            console.error(err);
+            console.error("LOGIN ERROR:", err);
 
+            // ----------------------------------------------------------
+            // CASE 1: Account already exists with another login provider
+            // ----------------------------------------------------------
+            if (err.code === "auth/account-exists-with-different-credential") {
+                const email = err.customData?.email;
+                const pendingCred =
+                    provider === "google"
+                        ? GoogleAuthProvider.credentialFromError(err)
+                        : GithubAuthProvider.credentialFromError(err);
+
+                if (!email) {
+                    setError("Account conflict. Try another login method.");
+                    return;
+                }
+
+                // Get the provider that actually owns this email
+                const methods = await fetchSignInMethodsForEmail(auth, email);
+
+                // CASE: Google is the original provider
+                if (methods.includes("google.com")) {
+                    const googleProv = new GoogleAuthProvider();
+                    const googleResult = await signInWithPopup(auth, googleProv);
+
+                    if (pendingCred) {
+                        // Link the NEW provider to the existing Google account
+                        await linkWithCredential(googleResult.user, pendingCred);
+                    }
+
+                    router.push("/dashboard");
+                    return;
+                }
+
+                // CASE: GitHub is the original provider
+                if (methods.includes("github.com")) {
+                    const githubProv = new GithubAuthProvider();
+                    const githubResult = await signInWithPopup(auth, githubProv);
+
+                    if (pendingCred) {
+                        await linkWithCredential(githubResult.user, pendingCred);
+                    }
+
+                    router.push("/dashboard");
+                    return;
+                }
+
+                setError("This email already exists with another provider.");
+                return;
+            }
+
+            // ----------------------------------------------------------
+            // CASE 2: Popup was closed
+            // ----------------------------------------------------------
             if (err.code === "auth/popup-closed-by-user") {
                 setError("Login canceled.");
             } else if (err.code === "auth/cancelled-popup-request") {
