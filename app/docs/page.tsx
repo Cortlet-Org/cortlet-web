@@ -39,9 +39,15 @@ export default function DocsPage() {
                             desc="Install packages, resolve dependencies, and manage C++ workflows."
                             href="/docs/quantpkg"
                         />
+
+                        <DocCard
+                            title="tbs CLI"
+                            desc="Learn to install, use, run, and troubleshoot Teretalia Boot Set."
+                            href="/docs/tbs"
+                        />
                     </div>
                 </section>
-                
+
 
                 {/* FOOTER */}
                 <footer className="text-center text-neutral-500 dark:text-neutral-400 py-16">
